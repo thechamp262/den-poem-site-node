@@ -1,21 +1,159 @@
 {{> header}}
-<div id="container">
-  <section id="admin-side-panel">
+<div class=" row">
+  <section class="col s12 m4 13" id="admin-side-panel">
     <div id="admin-side-panel__header">
-      <h3>Hello Denise!</h3>
+      <h3>Welcome Admin</h3>
     </div>
     <div id="admin-side-section-buttons">
       <nav>
         <ul>
-          <li><p>View Poems</p></li>
-          <li><p>Add new Poem</p></li>
-          <li><p>View Messages</p></li>
+          <li>View Poems</li>
+          <li>Add new Poem</li>
+          <li>View Messages</li>
         </ul>
       </nav>
     </div>
   </section>
-  <section id="admin-main-section">
+  <section class="col s12 m8 19">
+    <div class="admin-main-section__section" id="admin-main-section-view-poems">
+      <table class="bordered" id="admin-poems-table">
+        <thead>
+          <tr>
+            <th>
+              <div class="admin-main-section-table-head-divs"><p>Poem Title</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-head-divs"><p>Poem Body</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-head-divs"><p>Section</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-head-divs"><p>Is it Active?</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-head-divs"><p>Edit?</p></div>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>Catcher and the Rye!</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et laoreet urna. Praesent gravida eros ex, ut porta leo pharetra nec. Duis eu odio malesuada, venenatis nibh in, pulvinar magna. Nullam non vestibulum eros, ut gravida diam. Fusce eu ultricies ante. Nunc dui ante, efficitur sodales eleifend eu, fringilla et ligula. Maecenas pretium facilisis quam eget euismod.
 
+Proin rhoncus pharetra facilisis. Sed a placerat nibh. Cras hendrerit eget arcu id accumsan. Sed tincidunt et nunc nec aliquet. Nullam eu auctor massa. Quisque feugiat tortor vel tellus imperdiet, in lacinia ex tincidunt. Vivamus interdum mattis nisl, ut suscipit nisl accumsan non. Nunc vitae est sem. Nam at purus tristique, congue nisl non, auctor tellus. Donec pulvinar imperdiet ipsum condimentum sollicitudin. Quisque sollicitudin lorem eu eros dictum porttitor. Phasellus imperdiet est est, aliquet posuere velit sollicitudin ut. Maecenas convallis quam diam, at aliquam nibh maximus ac. Nulla vitae cursus ligula, eget cursus augue. Donec vitae dolor consequat, fringilla sapien nec, convallis quam.
+
+Nulla consequat est eget enim accumsan venenatis. Aenean id semper neque. Nullam pellentesque sapien a quam auctor eleifend. Proin rutrum sodales dictum. Duis fermentum nunc ac dui fringilla semper. Sed imperdiet urna felis, consequat rutrum neque efficitur nec. Donec eu neque nisl. Donec posuere elit dui, id sagittis nibh pretium eu. Donec tellus nulla, fermentum eu porta a, egestas sit amet nibh. Nulla augue magna, aliquet quis urna vehicula, finibus tempus augue. Cras semper pellentesque fermentum. Proin varius quis purus in feugiat. Duis commodo est sit amet nisi semper convallis. Phasellus et viverra neque. Mauris a ligula nec justo tempor ultricies.
+
+Nullam volutpat orci ac mauris porta, non vulputate ligula pretium. Curabitur id consectetur ex. Aenean euismod malesuada ante, at pulvinar enim consectetur quis. Suspendisse consectetur ex sed urna congue, a rhoncus sem mollis. Maecenas facilisis erat eu nunc fermentum, venenatis convallis libero accumsan. Fusce a urna eget tortor pretium elementum. Mauris posuere dolor et ultrices maximus. In efficitur, nisi ac porttitor bibendum, purus quam pellentesque tortor, sit amet imperdiet elit turpis at nunc. Morbi mattis, ex non bibendum hendrerit, erat elit malesuada felis, quis laoreet felis odio nec mi. Vivamus sed ante felis. Duis pellentesque, tortor ut consectetur fermentum, ante mi pellentesque orci, at pellentesque purus eros non mauris. Fusce sed odio porttitor, blandit ligula eget, ultrices dolor. Praesent ultrices ut velit quis sollicitudin.
+
+Phasellus condimentum, urna ut rutrum vulputate, ante sem imperdiet ex, eget lacinia arcu odio finibus est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur accumsan, dolor eget interdum bibendum, quam purus lobortis odio, et molestie erat lorem et quam. Ut lorem massa, rutrum id pulvinar vulputate, aliquet at risus. In hac habitasse platea dictumst. Nullam suscipit volutpat iaculis. Aliquam eget ullamcorper turpis, ut fringilla dolor. Praesent nec velit porttitor lectus rutrum porta non consequat dolor.
+              </p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>Classic</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>false</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><button>Edit</button></div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>Catcher and the Rye!</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et laoreet urna. Praesent gravida eros ex, ut porta leo pharetra nec. Duis eu odio malesuada, venenatis nibh in, pulvinar magna. Nullam non vestibulum eros, ut gravida diam. Fusce eu ultricies ante. Nunc dui ante, efficitur sodales eleifend eu, fringilla et ligula. Maecenas pretium facilisis quam eget euismod.
+
+Proin rhoncus pharetra facilisis. Sed a placerat nibh. Cras hendrerit eget arcu id accumsan. Sed tincidunt et nunc nec aliquet. Nullam eu auctor massa. Quisque feugiat tortor vel tellus imperdiet, in lacinia ex tincidunt. Vivamus interdum mattis nisl, ut suscipit nisl accumsan non. Nunc vitae est sem. Nam at purus tristique, congue nisl non, auctor tellus. Donec pulvinar imperdiet ipsum condimentum sollicitudin. Quisque sollicitudin lorem eu eros dictum porttitor. Phasellus imperdiet est est, aliquet posuere velit sollicitudin ut. Maecenas convallis quam diam, at aliquam nibh maximus ac. Nulla vitae cursus ligula, eget cursus augue. Donec vitae dolor consequat, fringilla sapien nec, convallis quam.
+
+Nulla consequat est eget enim accumsan venenatis. Aenean id semper neque. Nullam pellentesque sapien a quam auctor eleifend. Proin rutrum sodales dictum. Duis fermentum nunc ac dui fringilla semper. Sed imperdiet urna felis, consequat rutrum neque efficitur nec. Donec eu neque nisl. Donec posuere elit dui, id sagittis nibh pretium eu. Donec tellus nulla, fermentum eu porta a, egestas sit amet nibh. Nulla augue magna, aliquet quis urna vehicula, finibus tempus augue. Cras semper pellentesque fermentum. Proin varius quis purus in feugiat. Duis commodo est sit amet nisi semper convallis. Phasellus et viverra neque. Mauris a ligula nec justo tempor ultricies.
+
+Nullam volutpat orci ac mauris porta, non vulputate ligula pretium. Curabitur id consectetur ex. Aenean euismod malesuada ante, at pulvinar enim consectetur quis. Suspendisse consectetur ex sed urna congue, a rhoncus sem mollis. Maecenas facilisis erat eu nunc fermentum, venenatis convallis libero accumsan. Fusce a urna eget tortor pretium elementum. Mauris posuere dolor et ultrices maximus. In efficitur, nisi ac porttitor bibendum, purus quam pellentesque tortor, sit amet imperdiet elit turpis at nunc. Morbi mattis, ex non bibendum hendrerit, erat elit malesuada felis, quis laoreet felis odio nec mi. Vivamus sed ante felis. Duis pellentesque, tortor ut consectetur fermentum, ante mi pellentesque orci, at pellentesque purus eros non mauris. Fusce sed odio porttitor, blandit ligula eget, ultrices dolor. Praesent ultrices ut velit quis sollicitudin.
+
+Phasellus condimentum, urna ut rutrum vulputate, ante sem imperdiet ex, eget lacinia arcu odio finibus est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur accumsan, dolor eget interdum bibendum, quam purus lobortis odio, et molestie erat lorem et quam. Ut lorem massa, rutrum id pulvinar vulputate, aliquet at risus. In hac habitasse platea dictumst. Nullam suscipit volutpat iaculis. Aliquam eget ullamcorper turpis, ut fringilla dolor. Praesent nec velit porttitor lectus rutrum porta non consequat dolor.
+              </p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>Classic</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>false</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><button>Edit</button></div>
+            </th>
+          </tr>
+          <tr>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>Catcher and the Rye!</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer et laoreet urna. Praesent gravida eros ex, ut porta leo pharetra nec. Duis eu odio malesuada, venenatis nibh in, pulvinar magna. Nullam non vestibulum eros, ut gravida diam. Fusce eu ultricies ante. Nunc dui ante, efficitur sodales eleifend eu, fringilla et ligula. Maecenas pretium facilisis quam eget euismod.
+
+Proin rhoncus pharetra facilisis. Sed a placerat nibh. Cras hendrerit eget arcu id accumsan. Sed tincidunt et nunc nec aliquet. Nullam eu auctor massa. Quisque feugiat tortor vel tellus imperdiet, in lacinia ex tincidunt. Vivamus interdum mattis nisl, ut suscipit nisl accumsan non. Nunc vitae est sem. Nam at purus tristique, congue nisl non, auctor tellus. Donec pulvinar imperdiet ipsum condimentum sollicitudin. Quisque sollicitudin lorem eu eros dictum porttitor. Phasellus imperdiet est est, aliquet posuere velit sollicitudin ut. Maecenas convallis quam diam, at aliquam nibh maximus ac. Nulla vitae cursus ligula, eget cursus augue. Donec vitae dolor consequat, fringilla sapien nec, convallis quam.
+
+Nulla consequat est eget enim accumsan venenatis. Aenean id semper neque. Nullam pellentesque sapien a quam auctor eleifend. Proin rutrum sodales dictum. Duis fermentum nunc ac dui fringilla semper. Sed imperdiet urna felis, consequat rutrum neque efficitur nec. Donec eu neque nisl. Donec posuere elit dui, id sagittis nibh pretium eu. Donec tellus nulla, fermentum eu porta a, egestas sit amet nibh. Nulla augue magna, aliquet quis urna vehicula, finibus tempus augue. Cras semper pellentesque fermentum. Proin varius quis purus in feugiat. Duis commodo est sit amet nisi semper convallis. Phasellus et viverra neque. Mauris a ligula nec justo tempor ultricies.
+
+Nullam volutpat orci ac mauris porta, non vulputate ligula pretium. Curabitur id consectetur ex. Aenean euismod malesuada ante, at pulvinar enim consectetur quis. Suspendisse consectetur ex sed urna congue, a rhoncus sem mollis. Maecenas facilisis erat eu nunc fermentum, venenatis convallis libero accumsan. Fusce a urna eget tortor pretium elementum. Mauris posuere dolor et ultrices maximus. In efficitur, nisi ac porttitor bibendum, purus quam pellentesque tortor, sit amet imperdiet elit turpis at nunc. Morbi mattis, ex non bibendum hendrerit, erat elit malesuada felis, quis laoreet felis odio nec mi. Vivamus sed ante felis. Duis pellentesque, tortor ut consectetur fermentum, ante mi pellentesque orci, at pellentesque purus eros non mauris. Fusce sed odio porttitor, blandit ligula eget, ultrices dolor. Praesent ultrices ut velit quis sollicitudin.
+
+Phasellus condimentum, urna ut rutrum vulputate, ante sem imperdiet ex, eget lacinia arcu odio finibus est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur accumsan, dolor eget interdum bibendum, quam purus lobortis odio, et molestie erat lorem et quam. Ut lorem massa, rutrum id pulvinar vulputate, aliquet at risus. In hac habitasse platea dictumst. Nullam suscipit volutpat iaculis. Aliquam eget ullamcorper turpis, ut fringilla dolor. Praesent nec velit porttitor lectus rutrum porta non consequat dolor.
+              </p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>Classic</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><p>false</p></div>
+            </th>
+            <th>
+              <div class="admin-main-section-table-body-divs"><button>Edit</button></div>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="admin-main-section__section" id="admin-main-section-add-poem">
+      <form id="new-poem-form">
+          <input name="title" autofocus type="text" placeholder="Title"/>
+              <select name='category-select'>
+                  <option value="" disabled selected>Select Your Category</option>
+                  <option value='Test1'>Test1</option>
+                  <option value='Test2'>Test2</option>
+                  <option value='Test3'>Test3</option>
+              </select>
+            <p>
+              <input name="is-active" type="checkbox" id="test5" />
+              <label for="test5">Make Active</label>
+            </p>
+          <textarea id="textarea1" class="materialize-textarea" name="poem" placeholder="Poems"></textarea>
+          <div class="file-field input-field">
+            <div class="btn">
+              <span>Select Image</span>
+              <input name="image" type="file">
+            </div>
+            <div class="file-path-wrapper">
+              <input class="file-path validate" type="text">
+            </div>
+          </div>
+          <button id="poem-submit-button" class="btn waves-effect waves-light" type="submit" name="action">Submit Poem<i class="material-icons right"></i></button>
+      </form>
+    </div>
+    <div class="admin-main-section__section" id="admin-main-section-messages">
+    </div>
   </section>
 </div>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+<script type="text/javascript" src="/js/libs/jquery-3.2.1.min.js"></script>
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript" src="/js/admin.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 {{> footer}}
