@@ -6,48 +6,35 @@ let  PoemSchema = new mongoose.Schema({
     type: String,
     required: true,
     trim: true,
-    minlength: 1,
-    unique: true
+    minlength: 1
   },
   poem:{
     type: String,
     required: true,
     trim: true,
-    minlength;: 1,
-    unique: true
+    minlength: 1
   },
   categories:{
-    type: Number,
+    type: String,
     required: true,
     trim: true,
-    minlength: 1,
-    unique: true
+    minlength: 1
   },
   author:{
     type: Number,
     required: true,
     trim: true,
-    minlength: 1,
-    unique: true
+    minlength: 1
   },
   createdAt:{
     type: Number,
     required: true,
     trim: true,
-    minlength: 1,
-    unique: true
-  },
-  image:{
-    type: String,
-    required: true,
-    trim: true,
-    minlength: 1,
-    unique: true
+    minlength: 1
   },
   active:{
     type: Boolean,
-    required: true,
-    unique: true
+    required: true
   }
 })
 
@@ -58,7 +45,37 @@ PoemSchema.methods.toJSON = ()=>{
   return _.pick(poemObject,['_id','poem','title']);
 }
 
-PoemSchema.static.grabByCat = (sectionId)=>{
+PoemSchema.statics.grabAll = ()=>{
+
+  return new Promise((resolve,reject)=>{
+    Poems.find().then((poems)=>{
+      if(!poems){
+        return Promise.reject();
+      }
+      return resolve(poems);
+    })
+  })
+
+}
+
+PoemSchema.statics.grabOneById = (_id)=>{
+
+  return new Promise((resolve,reject)=>{
+    Poems.findOne({
+      _id
+    }).then((poem)=>{
+      console.log("Here Here", poem);
+      if(!poem){
+        return Promise.reject();
+      }
+      return resolve(poem);
+    }).catch((e)=>{
+      return Promise.reject();
+    })
+  })
+}
+
+PoemSchema.statics.grabByCat = (sectionId)=>{
   let poem = this;
   poem.findOne({
     categories:sectionId,
@@ -73,21 +90,23 @@ PoemSchema.static.grabByCat = (sectionId)=>{
   })
 }
 
-PoemSchema.static.saveNewPoem = (name,poem,categories,image,active)=>{
-  let poem = new Poems({
+PoemSchema.statics.saveNewPoem = (name,poem,categories,active)=>{
+  console.log('I am at the saveNewPoem section');
+  let poems = new Poems({
     name,
     poem,
     categories,
-    author: 'Denise Roberts',
-    createdAt: new Date().getTime();,
-    image,
+    author: 1,
+    createdAt: new Date().getTime(),
     active
-  })
-
-  poem.save().then((doc)=>{
-    return res.status(400).send(doc);
-  },(e)=>{
-    return res.send(e);
+  });
+  return new Promise((resolve,reject)=>{
+    poems.save().then((poem)=>{
+      if(!poem){
+        return Promise.reject();
+      }
+      return resolve(poem);
+    })
   })
 }
 

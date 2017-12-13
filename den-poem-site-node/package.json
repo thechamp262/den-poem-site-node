@@ -24,6 +24,7 @@
     "mongodb": "^3.0.0-rc0",
     "mongoose": "^4.13.6",
     "socket.io": "^2.0.4",
+    "socketio-file-upload": "^0.6.0",
     "validator": "^9.1.2"
   },
   "devDependencies": {

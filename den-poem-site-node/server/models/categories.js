@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const _ = require('lodash');
 
-let CategoriesSchema = new mongooes.Schema({
+let CategoriesSchema = new mongoose.Schema({
   name:{
     type: String,
     required: true,
@@ -25,18 +25,19 @@ CategoriesSchema.method.toJSON = ()=>{
   return _.pickt(catObject, ['_id','name','image']);
 }
 
-CategoriesSchema.static.displayAll = ()=>{
-  Categories.find().then((cat)=>{
-    if(!cat){
-      return res.status(404).send();
-    }
-    return res.send({cat});
-  }).catch((e)=>{
-    return res.status(404).send();
+CategoriesSchema.statics.displayAll = ()=>{
+
+  return new Promise((resolve,reject)=>{
+    Categories.find().then((cat)=>{
+      if(!cat){
+        return Promise.reject();
+      }
+      return resolve(cat);
+    })
   })
 }
 
-CategoriesSchema.static.newCategory = (name,imageUrl)=>{
+CategoriesSchema.statics.newCategory = (name,imageUrl)=>{
   let cat = new Categories({
     name,
     imageUrl
