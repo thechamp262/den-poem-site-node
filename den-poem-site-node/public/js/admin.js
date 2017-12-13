@@ -49,8 +49,14 @@ jQuery('document').ready(function(){
        <textarea id="textarea1" class="materialize-textarea" name="poem">${poem.poem}</textarea>
        <button id="${poem._id}" class="btn waves-effect waves-light" type="submit" name="action">Submit Edit<i class="material-icons right"></i></button>`
        jQuery('#edit-poem-form').append(formInput);
-       jQuery('#edit-poem-form').css('display','block');
+       jQuery('#edit-popup').css('display','block');
+       jQuery('#popup-overlay').css('display','block');
    })
+
+    jQuery('.row').on('click',function(){
+       jQuery('#popup-overlay').css('display','none');
+       document.getElementById('edit-popup').style.display = 'none';
+    })
 
    socket.on('outGoingPoemCatInfo',function(cat){
      let option = jQuery(`<option id="${cat._id}">${cat.name}</option>`);
